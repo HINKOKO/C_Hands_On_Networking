@@ -16,13 +16,13 @@
 
 #endif
 
-/* All above will detects if the compiler is runnoing on Windows or not*/
+/* All above will detects if the compiler is running on Windows or not*/
 /* And includes the proper headers for the platform it is running on */
 
 /**********************
  * Invalid sockets => Windows retunrs INVALID_SOCKET
  * on Unix => Invalid socket returns negative num on failure
- * !! => pb pb as Windows SOCKET is unsigned
+ * !! => pb  as Windows SOCKET is unsigned
  * There again , check this macro
  */
 
@@ -54,7 +54,7 @@ int main(void)
 #endif
 
 	/* Figure out the local address that our web server should bin to */
-	printf("Configurin local address...\n");
+	printf("Configuring local address...\n");
 	struct addrinfo hints;
 	/* Init hints memory places */
 	memset(&hints, 0, sizeof(hints));
@@ -79,8 +79,8 @@ int main(void)
 		fprintf(stderr, "socket() failed. (%d)\n", GETSOCKETERRNO());
 		return 1;
 	}
-	/* Socket created successfully, we call bin() to associate it with our address from getaddrinfo() */
-	printf("Now binding socker to local address...\n");
+	/* Socket created successfully, we call bind() to associate it with our address from getaddrinfo() */
+	printf("Now binding socket to local address...\n");
 	/* Bind returns 0 on success*/
 	if (bind(socket_listen,
 			 bind_address->ai_addr, bind_address->ai_addrlen))
@@ -97,7 +97,7 @@ int main(void)
 		return 1;
 	}
 	/* We now attempt to accept() */
-	printf("Waiting for connection...\n");
+	printf("Waiting for connection on port 8080...\n");
 	struct sockaddr_storage client;
 	socklen_t client_len = sizeof(client);
 	SOCKET socket_client = accept(socket_listen,
