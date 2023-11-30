@@ -1,8 +1,8 @@
 /* separate header file with reusable macros */
 #if defined(_WIN32)
-#ifnef _WIN32_WINNT
+#ifndef _WIN32_WINNT
 #define _WIN32_WINNT 0x600
-
+#endif
 #include <winsock2.h>
 #include <ws2tcpip.h>
 #pragma comment(lib, "ws-32.lib")
