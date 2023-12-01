@@ -62,3 +62,23 @@ Content-Length: 1256
         ......
         ......
 ```
+
+## **Testing our "microservice" of UpperCasing -> Server & Client**
+
+First of all of course, we compile our microservice server program with gcc:
+
+```
+gcc tcp_microserv_fork.c -o server
+```
+
+Then, by opening two terminals, we are able to test the communication between client and server, and to test that our basic microservice works as expected, here's a screenshot of what we get:
+
+<img src="./assets/microservice_on_the_run.png" />
+
+## **Testing our "microservice" of UpperCasing -> Server & Client**
+
+After compiling our `tcp_chat_room.c` file as usual, we can test it by opening 3 additional terminal in which we run our clients. <br>
+In the following screenshot, the leftmost terminal ( the Most Significant Bit terminal 😂) is running our chat_server. <br>
+The 3-right terminal are for Mary, Cindy and Brad, able to chit chat as showed, each one gets the messages send by the other and so on.
+
+<img src="./assets/chit_chat.png" />
