@@ -75,7 +75,7 @@ Then, by opening two terminals, we are able to test the communication between cl
 
 <img src="./assets/microservice_on_the_run.png" />
 
-## **Testing our "microservice" of UpperCasing -> Server & Client**
+## **Testing our chat server**
 
 After compiling our `tcp_chat_room.c` file as usual, we can test it by opening 3 additional terminal in which we run our clients. <br>
 In the following screenshot, the leftmost terminal ( the Most Significant Bit terminal 😂) is running our chat_server. <br>
