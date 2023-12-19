@@ -33,4 +33,23 @@
 
 </details>
 
+## **Downsides of UDP compared to TCP ?**
+
+<details>
+	<summary>Reveal answer</summary>
+
+- UDP does not attempt to fix many of the errors that TCP does... FOr example, TCP ensures that data **arrives on the same order it was sent**, TCP tries to avoid causing network congestion, and TCP attempts to **resend** lost packets. UDP does **none of this**
+
+</details>
+
+## **Can the same program use UDP and TCP?**
+
+<details>
+	<summary>Reveal answer</summary>
+
+- Yeah sure, It just needs to create sockets for both.
+
+</details>
+
+
 
